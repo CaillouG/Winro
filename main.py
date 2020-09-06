@@ -22,7 +22,11 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         bot.load_extension(f'cogs.{filename[:-3]}')
 
+<<<<<<< HEAD
 commandslist = ["say", "ping", "help", "winro", "setup", "mute", "unmute", "tempmute", "clear", "kick", "ban", "tempban", "rdel", "create", "add", "quit", "toz", "arouf", "pertedetemps", "dorime", "island", "shop", "inv", "buy", "xpsell", "picking", "fishing", "delisland", "warn", "warns", "clearwarns", "autorole"]
+=======
+commandslist = ["say", "ping", "help", "winro", "setup", "mute", "unmute", "tempmute", "clear", "kick", "ban", "tempban", "rdel", "create", "add", "quit", "toz", "arouf", "pertedetemps", "dorime", "island", "shop", "inv", "buy", "xpsell", "picking", "fishing", "delisland", "warn", "warns", "clearwarns", "autorole", "translate", "translatelist", "language"]
+>>>>>>> d133549... Ajout de translate
 
 @bot.command(pass_context=True)
 async def help(ctx, arg1=None):
@@ -95,6 +99,15 @@ async def help(ctx, arg1=None):
             embed.add_field(name="w!clearwarns [user]", value="Cette commande vous permet de supprimer tous les avertissements d'un utilisateur", inline=False)
         elif arg1 == "autorole":
             embed.add_field(name="w!autorole [role]", value="Cette commande vous permet d'activer ou désactiver la fonctione d'auto-rôle de Winro", inline=False)
+<<<<<<< HEAD
+=======
+        elif arg1 == "translate":
+            embed.add_field(name="w!translate [langue] [message]", value="Cette commande vous permet de traduire ", inline=False)
+        elif arg1 == "translatelist":
+            embed.add_field(name="w!translatelist", value="Cette commande vous donne la liste des langues disponibles pour la commande ``w!translate``", inline=False)
+        elif arg1 == "language":
+            embed.add_field(name="w!language [message]", value="Cette commande vous permet de connaitre la langue de votre message", inline=False)
+>>>>>>> d133549... Ajout de translate
         else :
             embed.add_field(name="Erreur !", value="La page d'aide de cette commande est en cours de rédaction !", inline=False)
     else :
@@ -103,7 +116,11 @@ async def help(ctx, arg1=None):
         embed.add_field(name="Commandes salons privés :", value="``rdel``, ``create``, ``add``, ``quit``", inline=False)
         embed.add_field(name="Commandes memes :", value="``toz``, ``arouf``, ``pertedetemps``, ``dorime``", inline=False)
         embed.add_field(name="Commandes Winro New Horizons [Bêta] :", value="``island``, ``shop``, ``inv``, ``buy``, ``xpsell``, ``picking``, ``fishing``, ``delisland``", inline=False)
+<<<<<<< HEAD
         embed.add_field(name="Commandes diverses :", value="``say``, ``ping``, ``help``, ``winro``", inline=False)
+=======
+        embed.add_field(name="Commandes diverses :", value="``say``, ``translate``, ``translatelist``, ``language``, ``ping``, ``help``, ``winro``", inline=False)
+>>>>>>> d133549... Ajout de translate
     embed.add_field(name="Une commande vous pose problème ?", value="Faites w!help [commande] pour avoir des détails sur la commande !", inline=False)
     embed.set_footer(text="Créé par WhitePixels#9953, * = facultatif")
     await ctx.send(embed=embed)        
