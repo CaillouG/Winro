@@ -96,7 +96,7 @@ async def help(ctx, arg1=None):
         elif arg1 == "autorole":
             embed.add_field(name="w!autorole [role]", value="Cette commande vous permet d'activer ou désactiver la fonctione d'auto-rôle de Winro", inline=False)
         elif arg1 == "translate":
-            embed.add_field(name="w!translate [langue] [message]", value="Cette commande vous permet de traduire ", inline=False)
+            embed.add_field(name="w!translate [langue] [message]", value="Cette commande vous permet de traduire le contenu de votre message", inline=False)
         elif arg1 == "translatelist":
             embed.add_field(name="w!translatelist", value="Cette commande vous donne la liste des langues disponibles pour la commande ``w!translate``", inline=False)
         elif arg1 == "language":
