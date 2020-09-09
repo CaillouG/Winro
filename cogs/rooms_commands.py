@@ -48,8 +48,10 @@ class Rooms(commands.Cog):
             embed.set_author(name="Create :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a créer le salon #{room} pour {round(time)} minutes", inline=True)
             embed.set_footer(text="Créer par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None :
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
             await asyncio.sleep((round(time)*60))
             await room.delete(reason="Temps expiré")

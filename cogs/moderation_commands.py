@@ -17,8 +17,10 @@ class Moderation(commands.Cog):
             embed.set_author(name="Clear :", icon_url="https://winro-bot.000webhostapp.com/ressources/clear.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a supprimé {limit} messages dans #{ctx.channel}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None:
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
         else: 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : gérer les messages)")
@@ -49,8 +51,10 @@ class Moderation(commands.Cog):
                     embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {time} minute(s)", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
-                    log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-                    if log != None:
+                    if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                        logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                        logchannel = logfile.read()
+                        log = self.bot.get_channel(int(logchannel))
                         await log.send(embed=embed)
                 else:
                     await ctx.send(f"{user.mention} a été réduit au silence {time} minute(s) pour {reason}")
@@ -60,8 +64,11 @@ class Moderation(commands.Cog):
                     embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {time} minute(s), pour {reason}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
-                    log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-                    await log.send(embed=embed)
+                    if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                        logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                        logchannel = logfile.read()
+                        log = self.bot.get_channel(int(logchannel))
+                        await log.send(embed=embed)
                 await asyncio.sleep(time*60)
                 await user.remove_roles(role)
                 await ctx.send(f"{user.mention} n'est plus réduit au silence !")
@@ -95,8 +102,10 @@ class Moderation(commands.Cog):
                     embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
-                    log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-                    if log != None:
+                    if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                        logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                        logchannel = logfile.read()
+                        log = self.bot.get_channel(int(logchannel))
                         await log.send(embed=embed)
                 else:
                     await ctx.send(f"{user.mention} a été réduit au silence pour la raison suivante : {reason}")
@@ -107,8 +116,10 @@ class Moderation(commands.Cog):
                     embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {reason}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
-                    log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-                    if log != None:
+                    if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                        logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                        logchannel = logfile.read()
+                        log = self.bot.get_channel(int(logchannel))
                         await log.send(embed=embed)
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : gérer les rôles)")
@@ -136,8 +147,10 @@ class Moderation(commands.Cog):
             embed.set_author(name="UnMute :", icon_url="https://winro-bot.000webhostapp.com//ressources/mute.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a rétabli la voix à {user.mention}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None:
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : gérer les rôles)")
@@ -163,8 +176,10 @@ class Moderation(commands.Cog):
             embed.set_author(name="Kick :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a expulsé {user.mention} pour {reason}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None:
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel)):
                 await log.send(embed=embed)
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : expluser des membres)")
@@ -190,8 +205,10 @@ class Moderation(commands.Cog):
             embed.set_author(name="Ban :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a banni {user.mention} pour {reason}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None:
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : bannir des membres)")
@@ -217,8 +234,10 @@ class Moderation(commands.Cog):
             embed.set_author(name="Ban :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a banni {user.mention} pour {days} jour(s)", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
-            log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-            if log != None:
+            if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+                logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+                logchannel = logfile.read()
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
             await asyncio.sleep(days*84600)
             await ctx.guild.unban(user)

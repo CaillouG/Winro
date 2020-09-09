@@ -26,8 +26,10 @@ class Misc(commands.Cog):
         embed.set_author(name="Say :", icon_url="https://winro-bot.000webhostapp.com/ressources/say.png")
         embed.add_field(name="Winro", value=f"{ctx.author.mention} a dit avec w!say : {arg}", inline=True)
         embed.set_footer(text="Créé par WhitePixels#9953")
-        log = discord.utils.get(ctx.guild.channels, name="📢-logs")
-        if log != None :
+        if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
+            logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
+            logchannel = logfile.read()
+            log = self.bot.get_channel(int(logchannel))
             await log.send(embed=embed)
 
     @say.error
