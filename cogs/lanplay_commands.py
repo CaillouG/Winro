@@ -33,7 +33,7 @@ class LanPlay(commands.Cog):
         embed = discord.Embed(
             colour = discord.Colour.orange()
         )
-        embed.set_author(name='Pack LanPlay', icon_url="http://winro.rf.gd/images/minia.png"")
+        embed.set_author(name='Pack LanPlay', icon_url="http://winro.rf.gd/images/minia.png")
         embed.add_field(name='Crée par WhitePixels', value="[Pack Complet LanPlay](https://1drv.ms/f/s!AjRUC3ntRrt1gX2CMItbpMMK9ghn)", inline=True)
         await ctx.send(embed=embed)
 
