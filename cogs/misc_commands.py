@@ -1,5 +1,6 @@
 import discord
 import discord.utils 
+import os
 from discord.ext import commands
 
 class Misc(commands.Cog):

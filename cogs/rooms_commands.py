@@ -2,6 +2,7 @@ import discord
 import discord.utils
 import asyncio
 import re
+import os
 from discord.ext.commands import has_permissions
 from discord.ext import commands
 

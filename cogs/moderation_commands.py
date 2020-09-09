@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import discord.utils 
+import os
 from discord.ext import commands
 
 class Moderation(commands.Cog):
@@ -179,7 +180,7 @@ class Moderation(commands.Cog):
             if os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt") == True :
                 logfile = open(f"./cogs/logs/{ctx.guild.id}.txt", "r")
                 logchannel = logfile.read()
-                log = self.bot.get_channel(int(logchannel)):
+                log = self.bot.get_channel(int(logchannel))
                 await log.send(embed=embed)
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : expluser des membres)")
