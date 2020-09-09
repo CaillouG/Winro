@@ -45,7 +45,7 @@ class Rooms(commands.Cog):
             embed=discord.Embed(    
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Create :", icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name="Create :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a créer le salon #{room} pour {round(time)} minutes", inline=True)
             embed.set_footer(text="Créer par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")

@@ -18,7 +18,7 @@ class Games(commands.Cog):
                 embed = discord.Embed(
                     colour = discord.Colour.orange()
                 )
-                embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+                embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                 embed.add_field(name="Système d'îles de Winro :", value="Winro intègre un mini-jeu à la Animal Crossing New Horizons 🏝️ !\n Si vous souhaitez devenir délégué insulaire, veuillez suivre le guide du nouveau délégué insulaire 🏳️ !", inline=False)
                 embed.add_field(name="Guide du nouveau délégué insulaire :", value=f"Bonjour {ctx.author.mention} ! Es tu prêt pour ta nouvelle vie insulaire ? Bien, si tu l'es, dit moi laquelle de ces 4 îles te plaît le plus :", inline=False)
                 embed.add_field(name="Île n° 1 🏝️ :", value="Cette île est basée dans l'hémisphère nord, avec comme fruit de base des pommes 🍎\n Si vous souhaitez habiter sur cette île, tapez ``w!island 1``.", inline=False)
@@ -36,7 +36,7 @@ class Games(commands.Cog):
                 embed=discord.Embed(
                     colour=discord.Colour.orange()
                 )
-                embed.set_author(name="Votre île :", icon_url="http://winro.rf.gd/images/minia.png")
+                embed.set_author(name="Votre île :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                 if "1" in islandtype:
                     embed.add_field(name="Type d'île :", value="Île basée dans l'hémisphère nord 🏝️", inline=False)
                     embed.add_field(name="Fruit principal :", value="Pommes 🍎", inline =False)
@@ -61,7 +61,7 @@ class Games(commands.Cog):
                     embed=discord.Embed(
                         colour=discord.Colour.orange()
                     )
-                    embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+                    embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                     embed.add_field(name="Île N° 1 🏝️ :", value="Bien, vous avez choisi l'île n°1 ! Vous allez bientôt atterir ! Bonne chance dans votre nouvelle vie de délégué insulaire 🏝️ !", inline=False)
                     await ctx.send(embed=embed)
                     os.mkdir(f"./cogs/games/wnh/{ctx.author.id}")
@@ -83,7 +83,7 @@ class Games(commands.Cog):
                     embed=discord.Embed(
                         colour=discord.Colour.orange()
                     )
-                    embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+                    embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                     embed.add_field(name="Île N° 2 🏝️ :", value="Bien, vous avez choisi l'île n°2 ! Vous allez bientôt atterir ! Bonne chance dans votre nouvelle vie de délégué insulaire 🏝️ !", inline=False)
                     await ctx.send(embed=embed)
                     os.mkdir(f"./cogs/games/wnh/{ctx.author.id}")
@@ -105,7 +105,7 @@ class Games(commands.Cog):
                     embed=discord.Embed(
                         colour=discord.Colour.orange()
                     )
-                    embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+                    embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                     embed.add_field(name="Île N° 3 🏝️ :", value="Bien, vous avez choisi l'île n°3 ! Vous allez bientôt atterir ! Bonne chance dans votre nouvelle vie de délégué insulaire 🏝️ !", inline=False)
                     await ctx.send(embed=embed)
                     os.mkdir(f"./cogs/games/wnh/{ctx.author.id}")
@@ -127,7 +127,7 @@ class Games(commands.Cog):
                     embed=discord.Embed(
                         colour=discord.Colour.orange()
                     )
-                    embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+                    embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                     embed.add_field(name="Île N° 4 🏝️ :", value="Bien, vous avez choisi l'île n°4 ! Vous allez bientôt atterir ! Bonne chance dans votre nouvelle vie de délégué insulaire 🏝️ !", inline=False)
                     await ctx.send(embed=embed)
                     os.mkdir(f"./cogs/games/wnh/{ctx.author.id}")
@@ -171,7 +171,7 @@ class Games(commands.Cog):
             embed = discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             luck = random.randint(1, 8)
             if round(luck) == 8:
                 embed.add_field(name="Cueillette :", value="Aïe, des abeilles vous ont attaquées... Vous perdez 200 clochettes. Revenez dans une heure pour recommencer !")
@@ -212,7 +212,7 @@ class Games(commands.Cog):
             embed = discord.Embed(
                 colour=discord.Colour.orange()
             )
-            embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.add_field(name="Inventaire :", value="Voici la liste des objets présents dans votre inventaire :", inline=False)
             inv = os.listdir(f"./cogs/games/wnh/{ctx.author.id}/inv")
             if len(inv) == 0:
@@ -233,7 +233,7 @@ class Games(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.add_field(name="Magasin Nook :", value="Voici la liste des objets disponible dans le magasin :", inline=False)
             embed.add_field(name="Pommes 🍎 :", value="Achetez une pommes pour 200 clochettes en faisant ``w!buy Pommes``\n Vendez la pour 10xp en faisant ``w!xpsell Pommes``", inline=False)
             embed.add_field(name="Poissons :", value="Achetez un poisson pour 400 clochettes en faisant ``w!buy Poissons``\n Vendez le pour 20xp en faisait ``w!xpsell Poissons``", inline=False)
@@ -345,7 +345,7 @@ class Games(commands.Cog):
             embed = discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Winro New Horizons :", icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name="Winro New Horizons :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             luck = random.randint(1, 8)
             if round(luck) == 8:
                 item = "Pneus"

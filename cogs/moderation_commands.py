@@ -14,7 +14,7 @@ class Moderation(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Clear :", icon_url="http://winro.rf.gd/ressources/clear.png")
+            embed.set_author(name="Clear :", icon_url="https://winro-bot.000webhostapp.com/ressources/clear.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a supprimé {limit} messages dans #{ctx.channel}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -46,7 +46,7 @@ class Moderation(commands.Cog):
                     embed=discord.Embed(
                         colour = discord.Colour.orange()
                     )
-                    embed.set_author(name="Mute :", icon_url="http://winro.rf.gd/ressources/mute.png")
+                    embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {time} minute(s)", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
                     log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -57,7 +57,7 @@ class Moderation(commands.Cog):
                     embed=discord.Embed(
                         colour = discord.Colour.orange()
                     )
-                    embed.set_author(name="Mute :", icon_url="http://winro.rf.gd/ressources/mute.png")
+                    embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {time} minute(s), pour {reason}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
                     log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -92,7 +92,7 @@ class Moderation(commands.Cog):
                     embed=discord.Embed(
                         colour = discord.Colour.orange()
                     )
-                    embed.set_author(name="Mute :", icon_url="http://winro.rf.gd/ressources/mute.png")
+                    embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
                     log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -104,7 +104,7 @@ class Moderation(commands.Cog):
                     embed=discord.Embed(
                         colour = discord.Colour.orange()
                     )
-                    embed.set_author(name="Mute :", icon_url="http://winro.rf.gd/ressources/mute.png")
+                    embed.set_author(name="Mute :", icon_url="https://winro-bot.000webhostapp.com/ressources/mute.png")
                     embed.add_field(name="Winro", value=f"{ctx.author.mention} a réduit au silence {user.mention} dans #{ctx.channel} pour {reason}", inline=True)
                     embed.set_footer(text="Créé par WhitePixels#9953")
                     log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -133,7 +133,7 @@ class Moderation(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="UnMute :", icon_url="http://winro.rf.gd/ressources/mute.png")
+            embed.set_author(name="UnMute :", icon_url="https://winro-bot.000webhostapp.com//ressources/mute.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a rétabli la voix à {user.mention}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -160,7 +160,7 @@ class Moderation(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Kick :", icon_url="http://winro.rf.gd/ressources/ban.png")
+            embed.set_author(name="Kick :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a expulsé {user.mention} pour {reason}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -187,7 +187,7 @@ class Moderation(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Ban :", icon_url="http://winro.rf.gd/ressources/ban.png")
+            embed.set_author(name="Ban :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a banni {user.mention} pour {reason}", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -214,7 +214,7 @@ class Moderation(commands.Cog):
             embed=discord.Embed(
                 colour = discord.Colour.orange()
             )
-            embed.set_author(name="Ban :", icon_url="http://winro.rf.gd/ressources/ban.png")
+            embed.set_author(name="Ban :", icon_url="https://winro-bot.000webhostapp.com/ressources/ban.png")
             embed.add_field(name="Winro", value=f"{ctx.author.mention} a banni {user.mention} pour {days} jour(s)", inline=True)
             embed.set_footer(text="Créé par WhitePixels#9953")
             log = discord.utils.get(ctx.guild.channels, name="📢-logs")

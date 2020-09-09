@@ -23,7 +23,7 @@ class Misc(commands.Cog):
         embed=discord.Embed(
             colour=discord.Colour.orange()
         )
-        embed.set_author(name="Say :", icon_url="http://winro.rf.gd/ressources/say.png")
+        embed.set_author(name="Say :", icon_url="https://winro-bot.000webhostapp.com/ressources/say.png")
         embed.add_field(name="Winro", value=f"{ctx.author.mention} a dit avec w!say : {arg}", inline=True)
         embed.set_footer(text="Créé par WhitePixels#9953")
         log = discord.utils.get(ctx.guild.channels, name="📢-logs")
@@ -44,7 +44,7 @@ class Misc(commands.Cog):
         embed=discord.Embed(
             colour = discord.Colour.orange()
         )
-        embed.set_author(name='Winro :', icon_url="http://winro.rf.gd/images/minia.png")
+        embed.set_author(name='Winro :', icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
         embed.add_field(name ='Description de Winro :', value="Je suis Winro, bot de modération et de commandes dédiées de base au serveur LanPlay FR ! Créer par WhitePixels#9953 le 4 avril 2020, je propose quelques commandes, des commandes de modération avancées ou encore des commandes pour créer des salons privés !", inline=False)
         embed.add_field(name ="Site :", value="http://winro.rf.gd", inline=True)
         embed.add_field(name ="Discord officiel :", value="https://discord.gg/cMJeGFh", inline=True)

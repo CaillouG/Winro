@@ -15,7 +15,7 @@ class Setup_panel(commands.Cog):
                 embed = discord.Embed(
                     color = discord.Color.orange()
                 )
-                embed.set_author(name="Panel des fonctions de Winro :", icon_url="http://winro.rf.gd/images/minia.png")
+                embed.set_author(name="Panel des fonctions de Winro :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                 embed.add_field(name="Liste des fonctions :", value="Voici la listes des fonctions de Winro activées sur votre serveur :", inline=False)
                 if logs != None :
                     embed.add_field(name="Sytème de logs [logs] :", value="Le système de logs de Winro est activé sur votre serveur ! ✅", inline=False)

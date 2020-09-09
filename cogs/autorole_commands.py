@@ -21,7 +21,7 @@ class Autorole_commands(commands.Cog):
                 embed = discord.Embed(
                     color = discord.Color.orange()
                 )
-                embed.set_author(name="Auto-rôle :", icon_url="http://winro.rf.gd/images/minia.png")
+                embed.set_author(name="Auto-rôle :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
                 if os.path.isfile(f"./cogs/autorole/{ctx.guild.id}.txt") == False:
                     embed.add_field(name="Information :", value="L'auto-rôle n'est pas activé sur votre serveur ❌. \nFaites ``w!autorole [role]`` pour automatiquement atribuer un rôle au nouveaux membres", inline=False)
                 else :

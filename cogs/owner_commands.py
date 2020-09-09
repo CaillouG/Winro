@@ -21,7 +21,7 @@ class Owner(commands.Cog):
             embed=discord.Embed(
             colour = discord.Colour.orange()
             )
-            embed.set_author(name='Winro :', icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name='Winro :', icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.set_footer(text="Créer par WhitePixels#9953")
             for guild in self.bot.guilds:
                 embed.add_field(name = "Serveur :", value=f"``{guild}`` -> ``{guild.member_count} membres``", inline=False)
@@ -35,7 +35,7 @@ class Owner(commands.Cog):
             embed=discord.Embed(
             colour = discord.Colour.orange()
             )
-            embed.set_author(name='Winro :', icon_url="http://winro.rf.gd/images/minia.png")
+            embed.set_author(name='Winro :', icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
             embed.description="__Statistiques du serveur de Winro :__"
             embed.add_field(name ="Utilisation CPU :", value=f"{psutil.cpu_percent(interval=None)}% d'utilisation CPU", inline=False)
             embed.add_field(name ="Utilisation Ram :", value=f"{psutil.virtual_memory()[2]}% de ram utilisé", inline=False)
