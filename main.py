@@ -29,7 +29,7 @@ async def help(ctx, arg1=None):
     embed = discord.Embed(
         color = discord.Color.orange()
     )
-    embed.set_author(name="Page d'aide de Winro:", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
+    embed.set_author(name="Page d'aide de Winro:", icon_url="http://winro.rf.gd/images/minia.png")
     if arg1 in commandslist:
         if arg1 == "ping":
             embed.add_field(name="w!ping", value="Cette commande vous permet de savoir la latence moyenne de Winro sur les 10 dernières secondes", inline=False)

@@ -12,7 +12,7 @@ class Translate_commands(commands.Cog):
         embed = discord.Embed(
             color = discord.Color.orange()
         )
-        embed.set_author(name="Traduction :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
+        embed.set_author(name="Traduction :", icon_url="http://winro.rf.gd/images/minia.png")
         translator = Translator()
         result = translator.translate(arg1, dest=arg2)            
         embed.add_field(name="__Langue d'origine :__", value=result.src, inline=False)
@@ -34,7 +34,7 @@ class Translate_commands(commands.Cog):
         embed = discord.Embed(
             color = discord.Color.orange()
         ) 
-        embed.set_author(name="Liste des langues disponibles :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
+        embed.set_author(name="Liste des langues disponibles :", icon_url="http://winro.rf.gd/images/minia.png")
         embed.add_field(name="Français :", value="``fr``", inline=False)
         embed.add_field(name="Anglais :", value="``en``", inline=False)
         embed.add_field(name="Allemand :", value="``de``", inline=False)
@@ -49,7 +49,7 @@ class Translate_commands(commands.Cog):
         embed = discord.Embed(
             color = discord.Color.orange()
         ) 
-        embed.set_author(name="Traduction :", icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
+        embed.set_author(name="Traduction :", icon_url="http://winro.rf.gd/images/minia.png")
         embed.add_field(name="__Langue d'origine de votre message :__", value=result.src)
         embed.set_footer(text="Créé par WhitePixels#9953, source : Google Translate API")
         await ctx.send(embed=embed)

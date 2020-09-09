@@ -46,7 +46,7 @@ class Warn_commands(commands.Cog):
             embed=discord.Embed(
             colour = discord.Colour.orange()
             )
-            embed.set_author(name='Winro :', icon_url="https://winro-bot.000webhostapp.com/images/minia.png")
+            embed.set_author(name='Winro :', icon_url="http://winro.rf.gd/images/minia.png")
             embed.set_footer(text="Créer par WhitePixels#9953")
             embed.add_field(name=f"Warns de {user} :", value=f"``{reasons}``")
             await ctx.send(embed=embed)
