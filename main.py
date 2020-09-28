@@ -15,7 +15,7 @@ async def on_ready():
     print(f'{bot.user} viens de se connecter à Discord !' )
     user = bot.get_user(323111825975672862)
     await user.send(f"Je viens de reboot, je suis actuellement connecté à ``{len(bot.guilds)}`` serveurs et j'ai une latence de ``{round(bot.latency * 1000)} ms``")
-    game = discord.Game(f"être sur {len(bot.guilds)} serveurs ! | prefix = w!")
+    game = discord.Game(f"prefix = w! | {len(set(bot.get_all_members()))} membres 🎉 !")
     await bot.change_presence(status=discord.Status.online, activity=game)
 
 for filename in os.listdir('./cogs'):

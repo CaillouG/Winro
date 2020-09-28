@@ -7,9 +7,14 @@ class Owner(commands.Cog):
         self.bot = bot
 
     @commands.command(pass_context=True)
-    async def presence(self, ctx):
+    async def presence(self, ctx, arg1=None):
         if ctx.author.id == 323111825975672862 : 
-            game = discord.Game(f"être sur {len(self.bot.guilds)} serveurs ! | prefix = w!")
+            if arg1 == "members" :
+                game = discord.Game(f"prefix = w! | {len(set(self.bot.get_all_members()))} membres 🎉 !")
+            elif arg1 == "servers" :
+                game = discord.Game(f"prefix = w! | {len(self.bot.guilds)} serveurs 🎉 !")
+            else :
+                game = discord.Game(f"prefix = w! | {len(set(self.bot.get_all_members()))} membres 🎉 !") 
             await self.bot.change_presence(status=discord.Status.online, activity=game)
             await ctx.send("Statut actualisé !")
         else :
