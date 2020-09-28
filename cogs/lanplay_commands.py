@@ -16,6 +16,8 @@ class LanPlay(commands.Cog):
     @commands.command(pass_context=True)
     @isPrivateCommand()
     async def lanplay(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``lanplay`` dans le serveur ``{ctx.guild}``")
         embed = discord.Embed(
             color = discord.Colour.orange()
         )
@@ -30,6 +32,8 @@ class LanPlay(commands.Cog):
     @commands.command(pass_context=True)
     @isPrivateCommand()
     async def pack(self, ctx): 
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``pack`` dans le serveur ``{ctx.guild}``")
         embed = discord.Embed(
             colour = discord.Colour.orange()
         )
@@ -40,6 +44,8 @@ class LanPlay(commands.Cog):
     @commands.command(pass_context=True)
     @isPrivateCommand()
     async def site(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``site`` dans le serveur ``{ctx.guild}``")
         embed = discord.Embed(
             colour = discord.Colour.orange()
         )
@@ -50,6 +56,8 @@ class LanPlay(commands.Cog):
     @commands.command(pass_context=True)
     @isPrivateCommand()
     async def serveur(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``serveur`` dans le serveur ``{ctx.guild}``")
         embed=discord.Embed(
             colour=discord.Colour.orange()
         )

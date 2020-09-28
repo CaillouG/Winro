@@ -8,6 +8,8 @@ class Setup_panel(commands.Cog):
 
     @commands.command(pass_context=True)
     async def setup(self, ctx, arg1=None, arg2=None):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``setup`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).administrator :
             if arg1 == None :
                 logs = os.path.isfile(f"./cogs/logs/{ctx.guild.id}.txt")

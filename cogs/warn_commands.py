@@ -9,6 +9,8 @@ class Warn_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def warn(self, ctx, user:discord.User, *, reason):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``warn`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).kick_members :
             if user == None or reason == None :
                 await ctx.send("Veulliez indiquer une utilisateur valide ainsi qu'une raison valide !")
@@ -40,6 +42,8 @@ class Warn_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def warns(self, ctx, user:discord.Member):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``warns`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).kick_members :
             warns = open(f"./cogs/warns/{ctx.guild.id}/{user.id}.txt", "r")
             reasons = warns.read()
@@ -66,6 +70,8 @@ class Warn_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def clearwarns (self, ctx, user:discord.Member):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``clearwarns`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).administrator :
             warn = f"./cogs/warns/{ctx.guild.id}/{user.id}.txt"
             os.remove(warn)

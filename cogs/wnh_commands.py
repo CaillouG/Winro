@@ -11,6 +11,8 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def island(self, ctx, arg1=None):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``island`` dans le serveur ``{ctx.guild}``")
         if os.path.isfile(f"./Procfile") == True :
             await ctx.send("⚠ En raison de la configuration actuelle de Winro, votre progression sera effacée à chaque redémarrage")
         if arg1 == None :
@@ -145,6 +147,8 @@ class Games(commands.Cog):
         
     @commands.command(pass_context=True)
     async def delisland(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``delisland`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île à supprimer, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else :
@@ -165,6 +169,8 @@ class Games(commands.Cog):
     @commands.command(pass_context=True)
     @commands.cooldown(1, 3600, commands.BucketType.user)
     async def picking(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``picking`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else :
@@ -206,6 +212,8 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True)
     async def inv(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``inv`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else : 
@@ -227,6 +235,8 @@ class Games(commands.Cog):
         
     @commands.command(pass_context=True)
     async def shop(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``shop`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else :
@@ -242,6 +252,8 @@ class Games(commands.Cog):
 
     @commands.command(pass_context=True) #Ajouter le nombre d'item que l'on souhaite acheter et check si il y a assez de money
     async def buy(self, ctx, item) :
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``buy`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else : 
@@ -295,6 +307,8 @@ class Games(commands.Cog):
     
     @commands.command(pass_context=True)#Ajouter le nombre d'item que l'on souhaite vendre
     async def xpsell(self, ctx, item):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``xpsell`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else : 
@@ -339,6 +353,8 @@ class Games(commands.Cog):
     @commands.command(pass_context=True)
     @commands.cooldown(1, 3600, commands.BucketType.user)
     async def fishing(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``fishing`` dans le serveur ``{ctx.guild}``")
         if os.path.isdir(f"./cogs/games/wnh/{ctx.author.id}") == False :
             await ctx.send("Vous n'avez pas d'île, si vous voulez enménager, faites ``w!island`` pour avoir plus d'informations !")
         else :

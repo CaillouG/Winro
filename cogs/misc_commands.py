@@ -9,10 +9,14 @@ class Misc(commands.Cog):
 
     @commands.command(pass_context=True)
     async def ping(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``ping`` dans le serveur ``{ctx.guild}``")
         await ctx.send(f"Pong {ctx.author.mention} ! Ma latence est de ``{round(self.bot.latency * 1000)} ms`` !")
 
     @commands.command(pass_context=True) 
     async def say(self, ctx, *, arg):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``say`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
         await ctx.channel.purge(limit=1)
         if "discord.gg" in arg or "@everyone" in arg:
@@ -44,6 +48,8 @@ class Misc(commands.Cog):
 
     @commands.command(pass_context=True)
     async def winro(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``winro`` dans le serveur ``{ctx.guild}``")
         embed=discord.Embed(
             colour = discord.Colour.orange()
         )

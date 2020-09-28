@@ -10,6 +10,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def clear(self, ctx, limit:int):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``clear`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).manage_messages :
             await ctx.channel.purge(limit=limit+1)
             embed=discord.Embed(
@@ -37,6 +39,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def tempmute(self, ctx, user : discord.Member, time:int, *, reason=None):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``tempmute`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
         if ctx.channel.permissions_for(ctx.author).manage_roles :
             if role == None :
@@ -87,6 +91,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def mute(self, ctx, user : discord.Member, *, reason=None):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``mute`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
         if ctx.channel.permissions_for(ctx.author).manage_roles :
             if role == None :
@@ -136,6 +142,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def unmute(self, ctx, user : discord.Member):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``unmute`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
         if ctx.channel.permissions_for(ctx.author).manage_roles :
             await user.remove_roles(role)
@@ -167,6 +175,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def kick(self, ctx, user : discord.Member, *, reason):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``kick`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).kick_members :
             await user.send(f'Vous avez été expulsé de {ctx.guild} pour la raison suivante : {reason}')
             await user.kick(reason=reason)
@@ -196,6 +206,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def ban(self, ctx, user : discord.Member, *, reason):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``ban`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).ban_members :
             await user.send(f'Vous avez été banni de {ctx.guild} pour la raison suivante : {reason}')
             await user.ban(reason=reason)
@@ -225,6 +237,8 @@ class Moderation(commands.Cog):
 
     @commands.command(pass_context=True)
     async def tempban(self, ctx, user : discord.Member, days:int):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``tempban`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).ban_members :
             await user.send(f'Vous avez été banni de {ctx.guild} pour {days} jour(s) !')
             await user.ban(reason=f"{days} jour(s)")

@@ -16,6 +16,8 @@ class Autorole_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def autorole(self, ctx, arg1=None):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``autorole`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).administrator :
             if arg1 == None :
                 embed = discord.Embed(

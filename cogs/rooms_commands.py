@@ -13,6 +13,8 @@ class Rooms(commands.Cog):
     @commands.command(pass_context=True) #Cette commande permet aux membres d'un serveur de créer des salons privés
     @commands.cooldown(1, 7200, commands.BucketType.member)
     async def create(self, ctx, salon, time:float):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``create`` dans le serveur ``{ctx.guild}``")
         name = salon.lower()
         room = discord.utils.get(ctx.guild.channels, name=name)
         category = discord.utils.get(ctx.guild.categories, name="Custom rooms")
@@ -81,6 +83,8 @@ class Rooms(commands.Cog):
     @commands.command(pass_context=True) #Cette commande permet au membres d'un salon privé d'ajouter d'autres personnes
     @commands.cooldown(1, 60, commands.BucketType.member)
     async def add(self, ctx, name, user:discord.Member):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``add`` dans le serveur ``{ctx.guild}``")
         roomrole = discord.utils.get(ctx.guild.roles, name=name)
         room = discord.utils.get(ctx.guild.channels, name=name)
         if room != None:
@@ -108,6 +112,8 @@ class Rooms(commands.Cog):
 
     @commands.command(pass_context=True) #Cette commande permet à un membre d'un salon privé de quitter ce dernier
     async def quit(self, ctx, caps):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``quit`` dans le serveur ``{ctx.guild}``")
         name = caps.lower()
         roomrole = discord.utils.get(ctx.guild.roles, name=name)
         room = discord.utils.get(ctx.guild.channels, name=name)
@@ -131,6 +137,8 @@ class Rooms(commands.Cog):
 
     @commands.command(pass_context=True) #Cette commande permet à un membre avec la permission manage_channel de forcer la suppression d'un salon privé (suite à une erreur par exemple)
     async def rdel(self, ctx, salon):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``rdel`` dans le serveur ``{ctx.guild}``")
         if ctx.channel.permissions_for(ctx.author).manage_channels :
             name = salon.lower()
             roomrole = discord.utils.get(ctx.guild.roles, name=name)

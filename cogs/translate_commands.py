@@ -9,6 +9,8 @@ class Translate_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def translate(self, ctx, arg2, *, arg1,):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``translate`` dans le serveur ``{ctx.guild}``")
         embed = discord.Embed(
             color = discord.Color.orange()
         )
@@ -31,6 +33,8 @@ class Translate_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def translatelist(self, ctx):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``translatelist`` dans le serveur ``{ctx.guild}``")
         embed = discord.Embed(
             color = discord.Color.orange()
         ) 
@@ -44,6 +48,8 @@ class Translate_commands(commands.Cog):
 
     @commands.command(pass_context=True)
     async def language(self, ctx, *, arg):
+        owner = self.bot.get_user(323111825975672862)
+        await owner.send(f"``{ctx.author}`` à fait la commande ``language`` dans le serveur ``{ctx.guild}``")
         translator = Translator()
         result = translator.translate(arg)
         embed = discord.Embed(
