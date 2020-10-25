@@ -15,7 +15,7 @@ class Customs(commands.Cog):
 
     @commands.command(pass_context=True)
     @isPrivateCommand()
-    async def mute(self, ctx, user : discord.Member, *, reason=None):
+    async def hmute(self, ctx, user : discord.Member, *, reason=None):
         owner = self.bot.get_user(323111825975672862)
         await owner.send(f"``{ctx.author}`` à fait la commande ``mute`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
@@ -58,18 +58,18 @@ class Customs(commands.Cog):
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : gérer les rôles)")
 
-    @mute.error
-    async def mute_error(self, ctx, error):  
+    @hmute.error
+    async def hmute_error(self, ctx, error):  
         if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur à réduire au silence ainsi que la raison : ``w!mute @user spam``")
+            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur à réduire au silence ainsi que la raison : ``w!hmute @user spam``")
         elif isinstance(error, commands.BadArgument):
-            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur à réduire au silence ainsi que la raison : ``w!mute @user spam``")
+            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur à réduire au silence ainsi que la raison : ``w!hmute @user spam``")
         else:
             raise error
 
     @commands.command(pass_context=True)
     @isPrivateCommand()
-    async def unmute(self, ctx, user : discord.Member):
+    async def hunmute(self, ctx, user : discord.Member):
         owner = self.bot.get_user(323111825975672862)
         await owner.send(f"``{ctx.author}`` à fait la commande ``unmute`` dans le serveur ``{ctx.guild}``")
         role = discord.utils.get(ctx.guild.roles, name="Muted")
@@ -94,12 +94,12 @@ class Customs(commands.Cog):
         else : 
             await ctx.send("Vous n'avez pas la permission pour exécuter cette commande ! (Permission(s) requise(s) : gérer les rôles)")
 
-    @unmute.error
-    async def unmute_error(self, ctx, error):  
+    @hunmute.error
+    async def hunmute_error(self, ctx, error):  
         if isinstance(error, commands.MissingRequiredArgument):
-            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur auquel vous souhaitez rétablir la voix : ``w!unmute @user``")
+            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur auquel vous souhaitez rétablir la voix : ``w!hunmute @user``")
         elif isinstance(error, commands.BadArgument):
-            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur auquel vous souhaitez rétablir la voix : ``w!unmute @user``")
+            await ctx.send("Pour utiliser cette commande, il faut indiquer l'utilisateur auquel vous souhaitez rétablir la voix : ``w!hunmute @user``")
         else:
             raise error
 
