@@ -1,4 +1,0 @@
-Changer les db pour utiliser les id au lieu des noms
-Optimiser tout le code 
-Changer le nom de certaines commande
-Proposer des logs plus propres 
